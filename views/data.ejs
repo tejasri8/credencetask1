@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <title>admin data</title>
+  <style>
+      .input[type=text] {
+        width: 130px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('searchicon.png');
+        background-position: 10px 10px; 
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+      }
+  </style>
+</head>
+
+<body>
+    <div class="navbar"  style="background-color: rgb(27, 75, 206);"role="navigation">
+        <div class="container">
+            <!--Company's name in Navbar-->
+            <a href="/details" style="color: white;">Home</a>
+            <div>
+                <a class="navbar-brand" style="color:white; font-weight:bold;" href="#">Admin Portal</a>
+            </div>
+            <!--User Profile Management-->
+            <div  id="top-nav">
+                        <ul class="nav" style="float: right;">
+                   
+                  <!--User Personal Details Management link-->
+                  <form>
+                    <input type="text" name="search" placeholder="Search..">
+                  </form>
+
+                  
+                        </ul>  
+                    </li>
+                </ul>
+            </div> 
+        </div>
+     </div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Username</th>
+
+       
+
+        <th scope="col">Email</th>
+
+      </tr>
+    </thead>
+    <% if(!data.view){ %>
+    <% for(var i=0;i!=data.userdata.length ;i++) {%>
+
+    <tbody>
+      <tr>
+
+
+        <td> <%=data.userdata[i].username%></td>
+
+       
+
+        <td><%=data.userdata[i].email%></td>
+
+
+      </tr>
+
+    </tbody>
+
+
+
+
+
+
+    <%}%>
+          <%}%>
+  </table>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

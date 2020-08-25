@@ -1,0 +1,135 @@
+<head>
+    <!--Bootstrap cdn-->
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <!--Fontawesome cdn for icons usage-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+    <!--title of web page-->
+  <title>Welcome</title>
+  <!--style section-->
+  <style>
+  
+  .navbar{
+    padding:0;
+  }
+  .nav>li>a {
+     position: relative; 
+    display: block;
+    padding: 13px 2px;
+  }
+  .nav>li>a:hover{
+    background-color:rgb(27, 75, 206);
+  }
+  .btn{
+    background-color:rgb(27, 75, 206) ;
+  }
+  .element{
+    text-align: center;
+    margin-top: 50px;
+  }
+  .drop:hover{
+    text-decoration: none;
+  }
+  .items>li>a:hover{
+    text-decoration: none;
+    color:slateblue;
+  }
+  .graphscale{
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+  .table{
+    margin-top:10px;
+    margin-left: 25%;
+  }
+  .connections{
+   text-align: center;
+    margin-top: 10%;
+  }
+  #collapseExample3{
+    margin-top: 10%;
+    text-align: center;
+  }
+  #collapseExample4{
+    margin-top: 10%;
+    text-align: center;
+  }
+  .button{
+    padding-left:20cm ;
+    background-color:#008CBA;border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  </style>
+  </head>
+  
+  
+  <body>
+  <!--Navbar Section--> 
+  <div class="navbar"  style="background-color: rgb(27, 75, 206);"role="navigation">
+     <div class="container">
+         <!--Company's name in Navbar-->
+         <div>
+             <a class="navbar-brand" style="color:white; font-weight:bold;" href="#">Admin Portal</a>
+         </div>
+         <!--User Profile Management-->
+         <div  id="top-nav">
+                     <ul class="nav" style="float: right;">
+                 <li class="dropdown">
+                     <a href="#" class="dropdown-toggle drop" style="color:white; font-size: large; padding:auto;" data-toggle="dropdown">
+                         <i class="fa fa-user-circle profile"></i> Profile <b class="caret"></b></a>
+                        <!--Account Management-->
+                         <ul class="dropdown-menu items">
+               <!--User Personal Details Management link-->
+               <form action="/profile" method="GET">
+                         <li><a href="/pdetails"><i class="fa fa-user-circle" style="margin-left: 5px;" ></i> Personal Details</a></li>
+               </form>
+                          
+                         <li class="dropdown-divider"></li>
+                            <!--Use Signout link--> 
+                            <li class="divider"></li>          
+                            <form action="/logout" method="GET">
+  
+                                <li>
+                                    <a href="/logout"><i class="fa fa-user-circle" style="margin-left: 5px;" ></i> Signout</a></li>
+                                  
+                                </li>
+                  
+                              </form>  
+                              
+                     </ul>  
+                 </li>
+             </ul>
+         </div> 
+     </div>
+  </div>
+  <!--Welcome-->
+  <h3 style="color:rgb(27, 75, 206); text-align: center;margin-top: 10px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Welcome 
+  </h3> 
+  <%if(data.show){%>
+    <h1 style="color:rgb(27, 75, 206); text-align: center;margin-top: 10px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><%=data.show%><h1>
+        <%}%>
+  <!--User performabble functions-->
+  <div style="padding-left: 9cm;padding-top:3cm">
+
+  <form action="/data" method="GET">
+    
+    <button class="button">Users</button>
+    
+  </form> 
+</div>
+ 
+  
+  
+  </body>
